@@ -132,15 +132,18 @@ main
     & img
         animation: updown 2s ease infinite
 
+    &-item
+        height: 8vh
+
 @keyframes updown
     0%
-        transform: translateY(-20%)
+        transform: translateY(40%)
 
     50%
-        transform: translateY(20%)
+        transform: translateY(0)
 
     100%
-        transform: translateY(-20%)
+        transform: translateY(40%)
 
 @media (max-width: 1200px)
     .first
@@ -244,7 +247,7 @@ main
         &-slogan
             & h1
                 color: #fff
-                font-size: 40px !important
+                font-size: 28px !important
                 text-align: center
                 margin: 5% 0
         &-item
