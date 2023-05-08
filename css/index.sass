@@ -29,14 +29,17 @@ body
         padding-inline-start: 0
     h1
         color: #000000
-        margin-top: 0
+        margin: 0
         outline: none
         font-size: 2em
     h2
+        margin: 0
         color: #fff !important
 
 .flex
     display: flex
+    &-ja
+        justify-content: space-around
     &-jc
         justify-content: center
     &-jb
@@ -49,6 +52,8 @@ body
         flex-direction: column
     &-ac
         align-items: center
+    &-ae
+        align-items: end
     &-wr
         flex-wrap: wrap
 
@@ -101,30 +106,46 @@ main
     max-width: 80vw
     margin: 0 auto
 
+.promo
+    height: 95vh
+    padding-top: 60px
+    display: grid
+    grid-template-rows: 20% 60% 20%
+
 .first
     &-slogan
         & h1
             color: #fff
-            font-size: 84px !important
+            font-size: 72px !important
             text-align: center
-            margin: 5% 0
+            width: 100%
     &-item
-        width: 90%
+        margin: 5% 0
         background: white
         border-radius: 50px
         padding: 5%
+        align-content: space-between
         &-image
             & img
                 width: 100%
         &-description
-            margin-right: 3.3%
+            margin-right: 35px
+            height: 100%
+            h1
+                margin-bottom: 40px
+
         &-link
             color: #fff
             background: #e14e36
-            padding: 15px
+            padding: 8px
             border-radius: 30px
+            margin: 10px 0 0 0
             flex: 28%
             text-align: center
+            &s
+                display: grid
+                grid-template-columns: repeat(3, 1fr)
+                gap: 1% 
             
 
 .second
@@ -137,13 +158,13 @@ main
 
 @keyframes updown
     0%
-        transform: translateY(40%)
+        transform: translateY(20%)
 
     50%
-        transform: translateY(0)
+        transform: translateY(-20%)
 
     100%
-        transform: translateY(40%)
+        transform: translateY(20%)
 
 @media (max-width: 1200px)
     .first
@@ -151,16 +172,13 @@ main
             justify-content: center
             flex-wrap: wrap-reverse
             &-link
-                &:last-child
-                    margin-right: 0
+            
             &-description
                 margin: 0
+                height: auto
         &-slogan
             & h1
-                color: #fff
                 font-size: 60px !important
-                text-align: center
-                margin: 5% 0
 
 @media (max-width: 992px)
 
@@ -168,7 +186,7 @@ main
 
     body
         h1
-            font-size: 1.8em
+            font-size: 1.5em
         div
             font-size: 16px
 
@@ -246,16 +264,20 @@ main
     .first
         &-slogan
             & h1
-                color: #fff
-                font-size: 28px !important
-                text-align: center
-                margin: 5% 0
-        &-item
+                font-size: 36px !important
+        &-item 
             &-description
                 margin: 0
+                & h1
+                    margin-bottom: 10px
             &-link
-                margin: 20px 0 0 0
-                flex: 40%
+                &s
+                    display: block
 
 @media (max-width: 500px)
-    
+
+    .first
+        &-slogan
+            & h1
+                font-size: 28px !important
+  
