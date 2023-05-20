@@ -107,7 +107,7 @@ main
     margin: 0 auto
 
 .promo
-    height: 95vh
+    height: 100vh
     padding-top: 60px
     display: grid
     grid-template-rows: 20% 60% 20%
@@ -155,7 +155,7 @@ main
                 gap: 1%
 
 .updown
-
+    margin-top: 30px
     & img
         animation: updown 2s ease infinite
 
@@ -166,7 +166,7 @@ main
 
 .cards
     align-items: stretch
-    gap: 1%
+    gap: 3%
 
 .card
     background: #fff
@@ -175,8 +175,8 @@ main
     flex: 20%
     text-align: center
     &-image
-
         img
+            margin: 0 auto
             width: 35%
             height: auto
     &-title
@@ -190,7 +190,7 @@ main
     background-position: 10px 12px
     background-repeat: no-repeat
     font-size: 20px
-    width: 90%
+    width: 100%
     padding: 15px 5%
     border-radius: 50px
     border: 0
@@ -213,6 +213,59 @@ main
     & tr.top, & tr:hover
         color: #000
         background-color: #fff
+
+*,
+*::before,
+*::after
+    box-sizing: border-box
+    padding: 0
+    margin: 0
+
+.container-news
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    max-width: 1200px
+    margin-block: 2rem
+    gap: 2rem
+
+img
+    max-width: 100%
+    display: block
+    object-fit: cover
+
+.card-news
+    display: flex
+    flex-direction: column
+    width: clamp(20rem, calc(20rem + 2vw), 22rem)
+    overflow: hidden
+    border-radius: 50px
+    background: #fff
+
+.card
+    &__head
+        padding: 30px 20px 10px
+
+    &__body
+        padding: 25px
+        display: flex
+        flex-direction: column
+        gap: .5rem
+
+    &__footer
+        display: flex
+        padding: 25px
+        margin-top: auto
+
+.user
+    display: flex
+    gap: .5rem
+
+    &__image
+        border-radius: 50%
+
+    &__info > small
+        color: #666
 
 @keyframes updown
     0%
@@ -240,7 +293,7 @@ main
 
     .card
         flex: 45%
-        margin-top: 1%
+        margin-top: 3%
 
 @media (max-width: 768px)
 
