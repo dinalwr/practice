@@ -120,15 +120,22 @@ main
             text-align: center
             width: 100%
     &-item
+        position: relative
+        overflow: hidden
         margin: 5% 0
+        padding: 5%
         background: white
         border-radius: 50px
-        padding: 5%
-        align-content: space-between
         &-image
+            z-index: 0
+            position: absolute
+            left: -10%
             & img
-                width: 100%
+                opacity: 0.5
+                width: 120%
         &-description
+            position: relative
+            z-index: 1
             margin-right: 35px
             height: 100%
             h1
@@ -156,7 +163,6 @@ main
         height: 8vh
 
 .product
-    height: 100vh
 
 .cards
     align-items: stretch
@@ -207,8 +213,6 @@ main
     & tr.top, & tr:hover
         color: #000
         background-color: #fff
-
-
 
 @keyframes updown
     0%

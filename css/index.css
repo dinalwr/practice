@@ -151,16 +151,25 @@ main {
   width: 100%;
 }
 .first-item {
+  position: relative;
+  overflow: hidden;
   margin: 5% 0;
+  padding: 5%;
   background: white;
   border-radius: 50px;
-  padding: 5%;
-  align-content: space-between;
+}
+.first-item-image {
+  z-index: 0;
+  position: absolute;
+  left: -10%;
 }
 .first-item-image img {
-  width: 100%;
+  opacity: 0.5;
+  width: 120%;
 }
 .first-item-description {
+  position: relative;
+  z-index: 1;
   margin-right: 35px;
   height: 100%;
 }
@@ -183,14 +192,11 @@ main {
 }
 
 .updown img {
-  animation: updown 2s ease infinite;
+  -webkit-animation: updown 2s ease infinite;
+          animation: updown 2s ease infinite;
 }
 .updown-item {
   height: 8vh;
-}
-
-.product {
-  height: 100vh;
 }
 
 .cards {
@@ -244,6 +250,18 @@ main {
 #myTable tr.top, #myTable tr:hover {
   color: #000;
   background-color: #fff;
+}
+
+@-webkit-keyframes updown {
+  0% {
+    transform: translateY(20%);
+  }
+  50% {
+    transform: translateY(-20%);
+  }
+  100% {
+    transform: translateY(20%);
+  }
 }
 
 @keyframes updown {
