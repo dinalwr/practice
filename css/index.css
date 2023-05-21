@@ -352,6 +352,21 @@ main {
   stroke: black;
   margin: 0;
 }
+.read-more-trigger .form-group {
+  margin-bottom: 20px;
+}
+.read-more-trigger label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.read-more-trigger input[type=email], .read-more-trigger input[type=password] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
 
 footer {
   box-shadow: 0 0 50px 0 rgba(255, 255, 255, 0.2);
