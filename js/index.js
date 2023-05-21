@@ -38,3 +38,41 @@ function myFunction() {
     }
   }
 }
+
+// Банковски карты, функции
+
+document.getElementById('card-number').addEventListener('input', function () {
+  // Код для определения логотипа платежной системы
+  var cardNumber = this.value.replace(/\D/g, ''); // Убираем все символы, кроме цифр
+  var visaRegexp = /^4[0-9]{12}(?:[0-9]{3})?$/;
+  var mastercardRegexp = /^5[1-5][0-9]{14}$/;
+  var amexRegexp = /^3[47][0-9]{13}$/;
+  var discoverRegexp = /^6(?:011|5[0-9]{2})[0-9]{12}$/;
+  var jcbRegexp = /^(?:2131|1800|35\d{3})\d{11}$/;
+  var dinersRegexp = /^3(?:0[0-5]|[68][0-9])[0-9]{11}$/;
+  var mirRegexp = /^220[0-4][0-9]{12}$/;
+  var logo;
+  if (visaRegexp.test(cardNumber)) {
+    logo = 'images/card/visa-logo.png';
+  } else if (mastercardRegexp.test(cardNumber)) {
+    logo = 'images/card/mastercard-logo.png';
+  } else if (amexRegexp.test(cardNumber)) {
+    logo = 'amex-logo.png';
+  } else if (discoverRegexp.test(cardNumber)) {
+    logo = 'discover-logo.png';
+  } else if (jcbRegexp.test(cardNumber)) {
+    logo = 'jcb-logo.png';
+  } else if (dinersRegexp.test(cardNumber)) {
+    logo = 'diners-logo.png';
+  } else if (mirRegexp.test(cardNumber)) {
+    logo = 'images/card/mir-logo.png';
+  } else {
+    logo = 'images/card/default-logo.png';
+  }
+
+  var logoImg = document.createElement('img');
+  logoImg.src = logo;
+  document.getElementById('logo-container').innerHTML = '';
+  document.getElementById('logo-container').appendChild(logoImg);
+});
+
