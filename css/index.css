@@ -154,7 +154,7 @@ main {
   position: relative;
   overflow: hidden;
   margin: 5% 0;
-  padding: 5%;
+  padding: 30px;
   background: white;
   border-radius: 50px;
 }
@@ -195,8 +195,7 @@ main {
   margin-top: 30px;
 }
 .updown img {
-  -webkit-animation: updown 2s ease infinite;
-          animation: updown 2s ease infinite;
+  animation: updown 2s ease infinite;
 }
 .updown-item {
   height: 8vh;
@@ -269,7 +268,6 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: 1200px;
   margin-block: 2rem;
   gap: 2rem;
 }
@@ -363,30 +361,18 @@ footer {
 }
 
 .footer {
+  justify-content: space-evenly;
   padding: 20px 0;
-}
-.footer-block {
-  flex: 25%;
 }
 .footer-block-head {
   font-weight: bold;
 }
-.footer-item {
-  margin-right: 10px;
+.footer-block-body li {
+  margin-top: 10px;
 }
-
-@-webkit-keyframes updown {
-  0% {
-    transform: translateY(20%);
-  }
-  50% {
-    transform: translateY(-20%);
-  }
-  100% {
-    transform: translateY(20%);
-  }
+.footer-block-body a:hover {
+  text-decoration: underline;
 }
-
 @keyframes updown {
   0% {
     transform: translateY(20%);
@@ -420,9 +406,6 @@ footer {
   }
   .footer {
     padding: 20px 0;
-  }
-  .footer-block {
-    flex: 50%;
   }
 }
 @media (max-width: 768px) {
@@ -525,6 +508,7 @@ footer {
     padding: 20px 0;
   }
   .footer-block {
+    margin-top: 30px;
     flex: 100%;
   }
 }
