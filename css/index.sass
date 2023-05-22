@@ -3,6 +3,7 @@ html, body
     scroll-behavior: smooth
 
 body
+    padding-top: 60px
     background: #161616
     margin: 0
     color: #000000
@@ -307,7 +308,7 @@ form
     position: relative
     z-index: 1
     background: #e1e1e1
-    margin: 70px 0
+    margin: 50px 0
     padding: 50px
     border: 1px solid black
     box-shadow: 0 0 10px 0 #000000
@@ -322,6 +323,7 @@ form
 .booking-btn
     display: grid
     grid-template-columns: 2fr 1fr
+    gap: 10px
     button
         padding: 10px 30px
 
@@ -344,6 +346,19 @@ form
         border: 1px solid #ccc
         border-radius: 5px
         box-sizing: border-box
+    table
+        border-collapse: collapse
+        font-size: 16px
+        width: 100%
+
+        th, td
+            border: 1px solid #ccc
+            padding: 10px
+            text-align: center
+
+            th
+                background-color: #eee
+                font-weight: bold
 
 button
     color: #000000 !important
@@ -352,7 +367,7 @@ button
     text-align: center
     font-size: 1.5rem
     border-radius: 5px
-    width: 94%
+    width: 100%
     padding: 3%
     cursor: pointer
     transition: .3s
@@ -512,6 +527,10 @@ button
 #year
     left: 23%
 
+.registration
+    margin: 0 auto
+    max-width: 600px
+
 footer
     box-shadow: 0 0 50px 0 rgba(255, 255, 255, 0.2)
     font-size: 1.5rem
@@ -554,7 +573,6 @@ footer
 
     .card-news
         flex: 48%
-
 
 @media (max-width: 992px)
 
@@ -677,6 +695,9 @@ footer
             flex-direction: column
             & li
                 margin: 0 0 20px 0
+
+    .container
+        max-width: 90vw
 
     .first
         &-slogan
