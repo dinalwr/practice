@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body {
   overflow-x: hidden;
   max-width: 100%;
@@ -769,6 +770,85 @@ iframe {
   border: 2px solid white;
   width: 78px;
   height: 78px;
+  /* Стилизация поисковой строки */
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+.search-container input[type=text] {
+  padding: 10px;
+  border: none;
+  font-size: 17px;
+  width: 100%;
+  border-radius: 50px;
+  background: #f1f1f1;
+}
+.search-container button {
+  background: #2196F3;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+.search-container button:hover {
+  opacity: 0.8;
+}
+
+.car-wrapper {
+  gap: 5%;
+}
+
+/* Стилизация блоков автомобилей */
+.car-block {
+  display: flex;
+  flex: 47%;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 50px;
+  padding: 20px;
+}
+.car-block .car-image {
+  margin-bottom: 10px;
+}
+.car-block .car-image img {
+  width: 300px;
+}
+.car-block .car-details h3 {
+  margin: 0;
+  font-size: 18px;
+}
+.car-block .car-details ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+.car-block .car-details ul li {
+  font-size: 16px;
+  margin: 5px 0;
+}
+.car-block .car-actions {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-direction: column;
+}
+.car-block .car-actions button {
+  background: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px 0 0 0;
+  border: none;
+  cursor: pointer;
+  border-radius: 50px;
+}
+.car-block .car-actions button:hover {
+  opacity: 0.8;
 }
 
 footer {

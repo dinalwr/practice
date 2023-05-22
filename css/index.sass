@@ -663,6 +663,81 @@ iframe
     width: 78px
     height: 78px
 
+    /* Стилизация поисковой строки */
+.search-container
+    display: flex
+    justify-content: center
+    margin: 20px 0
+
+    & input[type=text]
+        padding: 10px
+        border: none
+        font-size: 17px
+        width: 100%
+        border-radius: 50px
+        background: #f1f1f1
+
+    & button
+        background: #2196F3
+        color: white
+        padding: 10px 20px
+        border: none
+        cursor: pointer
+
+    & button:hover
+        opacity: 0.8
+
+
+.car-wrapper
+    gap: 5%
+/* Стилизация блоков автомобилей */
+.car-block
+    display: flex
+    flex: 47%
+    flex-direction: column
+    align-items: center
+    margin: 20px 0
+    border: 1px solid #ccc
+    background: #fff
+    border-radius: 50px
+    padding: 20px
+
+    & .car-image
+        margin-bottom: 10px
+        img
+            width: 300px
+
+    & .car-details h3
+        margin: 0
+        font-size: 18px
+
+    & .car-details ul
+        list-style: none
+        padding: 0
+        margin: 10px 0
+
+    & .car-details ul li
+        font-size: 16px
+        margin: 5px 0
+
+    & .car-actions
+        display: flex
+        justify-content: space-between
+        width: 100%
+        flex-direction: column
+
+    & .car-actions button
+        background: #4CAF50
+        color: white
+        padding: 10px 20px
+        margin: 10px 0 0 0
+        border: none
+        cursor: pointer
+        border-radius: 50px
+
+    & .car-actions button:hover
+        opacity: 0.8
+
 footer
     box-shadow: 0 0 50px 0 rgba(255, 255, 255, 0.2)
     font-size: 1.5rem

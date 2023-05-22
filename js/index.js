@@ -65,9 +65,9 @@ document.getElementById('card-number').addEventListener('input', function () {
   } else if (dinersRegexp.test(cardNumber)) {
     logo = 'diners-logo.png';
   } else if (mirRegexp.test(cardNumber)) {
-    logo = 'images/card/mir-logo.png';
+    logo = 'images/card/mir.png';
   } else {
-    logo = 'images/card/default-logo.png';
+    logo = 'images/card/default-card.png';
   }
 
   var logoImg = document.createElement('img');
@@ -97,7 +97,7 @@ function selectCard(cardType) {
     document.getElementById('card-to-year').value = '24';
     document.getElementById('cvv').value = '123';
   } else if (cardType === 'mastercard') {
-    document.getElementById('card-number').value = '5678 9012 3456 1234';
+    document.getElementById('card-number').value = '5478 9012 3456 1234';
     document.getElementById('card-to-month').value = '06';
     document.getElementById('card-to-year').value = '23';
     document.getElementById('cvv').value = '456';
@@ -160,16 +160,19 @@ function openCity(evt, cityName) {
   // Get all elements with class="tabcontent" and hide them
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
+    tabcontent[i].style.display = "none";
   }
 
   // Get all elements with class="tablinks" and remove the class "active"
   tablinks = document.getElementsByClassName("tablinks");
   for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
 
   // Show the current tab, and add an "active" class to the button that opened the tab
   document.getElementById(cityName).style.display = "block";
   evt.currentTarget.className += " active";
 }
+
+
+
