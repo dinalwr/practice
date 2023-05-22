@@ -128,8 +128,8 @@ saveBlockBtn.addEventListener('click', () => {
   // Создаем элемент блока
   const block = document.createElement('div');
   block.classList.add('card-item');
-  block.innerHTML = 
-  `
+  block.innerHTML =
+    `
     <p>****${lastFourDigits}</p>
     <span>${month} </span><span>${year}</span>
     <button class="delete-block-btn">Удалить</button>
@@ -156,3 +156,21 @@ const heading = document.getElementById("my-heading");
 const text = heading.textContent;
 const lastFour = text.substring(text.length - 4);
 heading.textContent = lastFour;
+
+// получаем текущую дату
+var today = new Date();
+
+// форматируем дату в формат yyyy-mm-dd
+var dd = today.getDate();
+var mm = today.getMonth()+1; //January is 0!
+var yyyy = today.getFullYear();
+if(dd<10) {
+    dd='0'+dd
+} 
+if(mm<10) {
+    mm='0'+mm
+} 
+var formattedDate = yyyy+'-'+mm+'-'+dd;
+
+// устанавливаем значение атрибута value элемента input
+document.getElementById("date-book").value = formattedDate;

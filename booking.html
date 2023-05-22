@@ -16,7 +16,7 @@
     <header id="navbar" class="header">
         <div class="container">
             <div class="header-body flex flex-jb flex-ac">
-                <a href="#" class="header-logo">IndexDrive</a>
+                <a href="index.html" class="header-logo">IndexDrive</a>
                 <div class="header-burger">
                     <span></span>
                 </div>
@@ -33,7 +33,7 @@
 
 
     <main class="container">
-        <section class="flex flex-jb">
+        <section class="auto-client flex flex-wr flex-je">
             <form method="post">
                 <h1>Данные о авто</h1>
                 <div class="form-group">
@@ -68,20 +68,34 @@
                     <label for="branch">Филиал</label>
                     <input type="password" id="branch" name="branch" required="">
                 </div>
-                <button type="submit">Sign up</button>
-                <a href="personal-area.html">
-                    <h5><u>Already has account?</u></h5>
-                </a>
+                <div class="form-group">
+                    <label for="tarif">Тариф</label>
+                    <select>
+                        <option value="Econom">Econom</option>
+                        <option value="Premium">Premium</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="tarif">Выберите авто</label>
+                    <select>
+                        <option value="BMW">BMW</option>
+                        <option value="Toyota">Toyota</option>
+                        <option value="Nissan">Nissan</option>
+                        <option value="Subaru">Subaru</option>
+                        <option value="Mazda">Mazda</option>
+                    </select>
+                    
+                </div>
             </form>
             <form method="post">
                 <h1>Данные о клиенте</h1>
                 <div class="form-group">
                     <label for="ID">Фамилия</label>
-                    <input type="number" id="ID" name="ID" required="">
+                    <input type="text" id="ID" name="ID" required="">
                 </div>
                 <div class="form-group">
                     <label for="ID">Имя</label>
-                    <input type="number" id="ID" name="ID" required="">
+                    <input type="text" id="ID" name="ID" required="">
                 </div>
                 <div class="form-group">
                     <label for="mark">Отчество</label>
@@ -89,32 +103,28 @@
                 </div>
                 <div class="form-group">
                     <label for="password">Номер телефона</label>
-                    <input type="text" id="name-auto" name="name-auto" required="">
+                    <input type="number" id="name-auto" name="name-auto" required="">
                 </div>
                 <div class="form-group">
                     <label for="num-auto">Паспортные данные</label>
-                    <input type="text" id="num-auto" name="num-auto" required="">
+                    <input type="number" id="num-auto" name="num-auto" required="">
                 </div>
                 <div class="form-group">
-                    <label for="date-book">Дата бронирования</label>
-                    <input type="date" id="date-book" name="date-book" required="">
+                    <label for="date-book">Банковская карта</label>
+                    <select>
+                        <option value="**** **** **** 1234">Карта 1 (**** **** **** 1234)</option>
+                        <option value="**** **** **** 5678">Карта 2 (**** **** **** 5678)</option>
+                    </select>
                 </div>
                 <div class="form-group">
-                    <label for="date-return">Дата возврата</label>
+                    <label for="date-return">Дата рождения</label>
                     <input type="date" id="date-return" name="date-return" required="">
                 </div>
-                <div class="form-group">
-                    <label for="coast">Стоимость бронирования за день</label>
-                    <input type="number" id="coast" name="coast" required="">
+                <div class="booking-btn">
+                    <button type="submit">Бронировать</button>
+                    <button>Ещё ></button>
                 </div>
-                <div class="form-group">
-                    <label for="branch">Филиал</label>
-                    <input type="password" id="branch" name="branch" required="">
-                </div>
-                <button type="submit">Sign up</button>
-                <a href="personal-area.html">
-                    <h5><u>Already has account?</u></h5>
-                </a>
+
             </form>
         </section>
     </main>

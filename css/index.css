@@ -361,8 +361,8 @@ form {
   position: relative;
   z-index: 1;
   background: #e1e1e1;
-  margin: 25vh 0;
-  padding: 10vh;
+  margin: 70px 0;
+  padding: 50px;
   border: 1px solid black;
   box-shadow: 0 0 10px 0 #000000;
   border-radius: 50px;
@@ -375,6 +375,14 @@ form h5 {
   text-align: center;
   -webkit-text-decoration: solid;
           text-decoration: solid;
+}
+
+.booking-btn {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+.booking-btn button {
+  padding: 10px 30px;
 }
 
 .login-form {
@@ -393,7 +401,7 @@ form h5 {
   margin-bottom: 5px;
   font-weight: bold;
 }
-.form-group input {
+.form-group input, .form-group select, .form-group option {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
