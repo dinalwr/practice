@@ -76,3 +76,83 @@ document.getElementById('card-number').addEventListener('input', function () {
   document.getElementById('logo-container').appendChild(logoImg);
 });
 
+var input = document.getElementById("card-number");
+input.addEventListener("input", function () {
+  var value = this.value.replace(/\s/g, '');
+  var formattedValue = '';
+  for (var i = 0; i < value.length; i++) {
+    if (i % 4 == 0 && i > 0) {
+      formattedValue += ' ';
+    }
+    formattedValue += value[i];
+  }
+  this.value = formattedValue;
+});
+
+
+function selectCard(cardType) {
+  if (cardType === 'mir') {
+    document.getElementById('card-number').value = '2202 2036 2794 2297';
+    document.getElementById('card-to-month').value = '12';
+    document.getElementById('card-to-year').value = '24';
+    document.getElementById('cvv').value = '123';
+  } else if (cardType === 'mastercard') {
+    document.getElementById('card-number').value = '5678 9012 3456 1234';
+    document.getElementById('card-to-month').value = '06';
+    document.getElementById('card-to-year').value = '23';
+    document.getElementById('cvv').value = '456';
+  }
+}
+
+// Получаем элементы DOM
+const addBlockBtn = document.getElementById('add-block-btn');
+const blocksContainer = document.getElementById('blocks-container');
+const modal = document.getElementById('modal');
+const blockNumberInput = document.getElementById('number');
+const blockMonthInput = document.getElementById('month');
+const blockYearInput = document.getElementById('year');
+const saveBlockBtn = document.getElementById('save-block-btn');
+// Обработчик события на нажатие кнопки "Добавить блок"
+addBlockBtn.addEventListener('click', () => {
+  // Открываем модальное окно
+  modal.style.display = 'block';
+});
+// Обработчик события на нажатие кнопки "Сохранить"
+saveBlockBtn.addEventListener('click', () => {
+  // Получаем значения полей ввода
+  const number = blockNumberInput.value;
+  let str = number.toString();
+  let lastFourDigits = str.slice(-4);
+  const month = blockMonthInput.value;
+  const year = blockYearInput.value;
+  // Создаем элемент блока
+  const block = document.createElement('div');
+  block.classList.add('card-item');
+  block.innerHTML = 
+  `
+    <p>****${lastFourDigits}</p>
+    <span>${month} </span><span>${year}</span>
+    <button class="delete-block-btn">Удалить</button>
+  `;
+  // Добавляем элемент блока на страницу
+  blocksContainer.appendChild(block);
+  // Закрываем модальное окно
+  modal.style.display = 'none';
+  // Обработчик события на нажатие кнопки "Удалить" для нового блока
+  const deleteBlockBtns = document.querySelectorAll('.delete-block-btn');
+  const lastDeleteBlockBtn = deleteBlockBtns[deleteBlockBtns.length - 1];
+  lastDeleteBlockBtn.addEventListener('click', () => {
+    block.remove();
+  });
+});
+// Обработчик события на нажатие кнопки "Удалить" для существующих блоков
+blocksContainer.addEventListener('click', (event) => {
+  if (event.target.classList.contains('delete-block-btn')) {
+    event.target.parentNode.remove();
+  }
+});
+
+const heading = document.getElementById("my-heading");
+const text = heading.textContent;
+const lastFour = text.substring(text.length - 4);
+heading.textContent = lastFour;
