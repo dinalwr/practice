@@ -33,23 +33,45 @@
 
 
     <main class="container">
-        <section class="registration">
-            <form>
-                <h1>Авторизация</h1>
-
-                <div class="form-group">
-                    <label>Телефон:</label>
-                    <input type="tel" name="phone" required>
-                </div>
-
-                <div class="form-group">
-                    <label>Пароль:</label>
-                    <input type="password" name="password" required>
-                </div>
-
-                <button type="submit">ВХОД</button>
-            </form>
-        </section>
+        <section class="history">
+            <table>
+                <thead>
+                  <tr>
+                    <th>Код бронирования</th>
+                    <th>Стоимость бронирования за день</th>
+                    <th>Номер заказа</th>
+                    <th>Марка автомобиля</th>
+                    <th>Модель автомобиля</th>
+                    <th>Фото автомобиля</th>
+                    <th>Дата начала аренды</th>
+                    <th>Дата окончания аренды</th>
+                    <th>Количество дней аренды</th>
+                    <th>Филиал аренды</th>
+                    <th>Итоговая стоимость аренды</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>1 200 RUB</td>
+                        <td>126-456</td>
+                        <td>Toyota</td>
+                        <td>Camry (2021)</td>
+                        <td><img src="images/cars/camry.webp"></td>
+                        <td>22.05.2023</td>
+                        <td>24.05.2023</td>
+                        <td>2</td>
+                        <td>Подольская ул., 20, Санкт-Петербург, 190013</td>
+                        <td>2 400 RUB</td>
+                        <td><button>Повторить бронирование</button></td>
+                      </tr>
+                </tbody>
+              </table>
+            </section>
+            <div class="history-image">
+              <img src="images/roads/empty-paved-road-at-sunset-in-the-chilean-patagonia-royalty-free-image-1591901619.jpg" alt="">
+            </div>
+        
     </main>
 
     <footer>

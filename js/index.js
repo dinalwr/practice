@@ -152,25 +152,24 @@ blocksContainer.addEventListener('click', (event) => {
   }
 });
 
-const heading = document.getElementById("my-heading");
-const text = heading.textContent;
-const lastFour = text.substring(text.length - 4);
-heading.textContent = lastFour;
 
-// получаем текущую дату
-var today = new Date();
+function openCity(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
 
-// форматируем дату в формат yyyy-mm-dd
-var dd = today.getDate();
-var mm = today.getMonth()+1; //January is 0!
-var yyyy = today.getFullYear();
-if(dd<10) {
-    dd='0'+dd
-} 
-if(mm<10) {
-    mm='0'+mm
-} 
-var formattedDate = yyyy+'-'+mm+'-'+dd;
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+  }
 
-// устанавливаем значение атрибута value элемента input
-document.getElementById("date-book").value = formattedDate;
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
